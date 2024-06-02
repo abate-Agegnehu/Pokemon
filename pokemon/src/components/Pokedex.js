@@ -74,7 +74,7 @@ const Pokedex = () => {
 
   useEffect(() => {
     axios
-      .get(`https://pokeapi.co/api/v2/pokemon?limit=300`)
+      .get(`https://pokeapi.co/api/v2/pokemon?limit=1000`)
       .then(function (response) {
         const { data } = response;
         const { results } = data;
@@ -127,7 +127,6 @@ const Pokedex = () => {
             <TextField
               onChange={handleSearchChange}
               className={classes.searchInput}
-              //have to add InputProps for textField
               InputProps={{ className: classes.input }}
               placeholder="...Pikachu"
               variant="standard"
