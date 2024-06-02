@@ -93,10 +93,9 @@ const Pokedex = () => {
   }, []);
 
   const getPokemonCard = (pokemonId) => {
-
     const { id, name, sprite } = pokemonData[pokemonId];
     return (
-      <Grid item xs={4} key={pokemonId}>
+      <Grid item xs={12} sm={6} md={4} key={pokemonId}>
         <Card
           onClick={() => {
             navigate(`/${pokemonId}`);
